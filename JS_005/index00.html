@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      header {
+        background-color: rgb(120, 230, 120);
+        padding: 1.3em;
+        color: white;
+        text-align: center;
+        text-shadow: 1px 1px 1px black;
+      }
+
+      nav {
+        background-color: rgb(188, 188, 228);
+        color: white;
+      }
+
+      ul {
+        list-style-type: square;
+        list-style: none;
+      }
+
+      li {
+        display: inline-block;
+        padding: 12px 16px;
+        cursor: pointer;
+      }
+
+      li:nth-of-type(1) {
+        margin-left: 20px;
+      }
+
+      li:hover {
+        background-color: #aaa;
+      }
+
+      fieldset {
+        border: 1px solid blue;
+        padding: 16px 10px;
+        width: 30%;
+        text-align: center;
+      }
+
+      form button {
+        background-color: blueviolet;
+        border-radius: 2px;
+        color: white;
+      }
+
+      footer {
+        background-color: black;
+        color: white;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>검색엔진</h1>
+      <p>구글, 네이버, 다음 검색을 구현하다</p>
+    </header>
+    <nav class="main_nav">
+      <ul>
+        <li id="home">Home</li>
+        <li id="google">구글</li>
+        <li id="naver">네이버</li>
+        <li id="daum">다음</li>
+        <li id="about">About</li>
+      </ul>
+    </nav>
+    <section>
+      <article>
+        <form>
+          <fieldset>
+            <label>검색어</label>
+            <input placeholder="검색어를 입력하세요" />
+            <button>검색</button>
+          </fieldset>
+        </form>
+      </article>
+    </section>
+    <footer>
+      <address>CopyRight &copy; sindallar123@naver.com</address>
+    </footer>
+  </body>
+  <script src="js/main00.js"></script>
+</html>
