@@ -9,34 +9,28 @@ const btnAdd = document.querySelector("button.add");
  */
 
 const scoreCheck = () => {
-  const inputKor = document.querySelector("input[name='sc_kor']");
-  const inputEng = document.querySelector("input[name='sc_eng']");
-  const inputMath = document.querySelector("input[name='sc_math']");
+  for (let i = 2; i < inputs.length; i++) {
+    const input = inputs[i];
+    const holderText = inputs[i].placeholder;
 
-  if (!inputKor.value) {
-    alert("국어 점수를 입력하세요");
-    inputKor.focus();
-  } else if (Number(inputKor.value) < 0 || Number(inputKor.value) > 100) {
-    alert("국어 점수는 0 ~ 100까지 범위에서 입력하세요");
-    inputKor.focus();
-    // 영어 점수
-  } else if (!inputEng.value) {
-    alert("영어 점수를 입력하세요");
-    inputEng.focus();
-  } else if (Number(inputEng.value) < 0 || Number(inputEng.value) > 100) {
-    alert("영어 점수는 0 ~ 100 까지 범위에서 입력하세요");
-    inputEng.focus();
-    // 수학 점수
-  } else if (!inputMath.value) {
-    alert("수학 점수를 입력하세요");
-    inputMath.focus();
-  } else if (Number(inputMath.value) < 0 || Number(inputMath.value) > 100) {
-    alert("수학 점수는 0 ~ 100 까지 범위에서 입력하세요");
-    inputMath.focus();
-  } else {
-    return true;
+    if (!input.value) {
+      alert(`${holderText} 점수를 입력하세요`);
+    } else if (Number(input.value) < 0 || Number(input.value) > 100) {
+      alert(`${holderText} 점수는 0 ~100 까지 입력하세요`);
+    } else if (!Number(input.value)) {
+      alert(`${holderText} 점수는 숫자로만 입력하세요`);
+    } else {
+      // 다시 for() 다음 번 코드를  실행하라
+      // i가 0 이었으면 i가 1 인 경우의 코드를 실행하라
+      // 여기에서 return 을 하면 첫번째 요소가 정상이면 나머지는
+      // 검사를 하지 않아 버린다
+      continue;
+    }
+    input.value = "";
+    input.focus();
+    return false;
   }
-  return false;
+  return true;
 };
 
 const scoreInput = () => {
