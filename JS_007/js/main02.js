@@ -65,16 +65,6 @@ const scoreCheck = () => {
   return true;
 };
 
-const addrInput = () => {
-  const tr = document.createElement("TR");
-  for (let i = 0; i < inputs.length; i++) {
-    const td = document.createElement("TD");
-    td.textContent = inputs[i].value;
-    tr.appendChild(td);
-  }
-  tBodyScore.appendChild(tr);
-};
-
 const scoreInput = () => {
   const tr = document.createElement("TR");
   let sum = 0;
@@ -116,13 +106,7 @@ const scoreInput = () => {
   localStorage.setItem("myScore", JSON.stringify(scoreList));
 };
 
-// click event 가 발생하면 미리 선언해둔
-// scoreInput 함수를  실행하라
-
 btnAdd?.addEventListener("click", () => {
-  // addrCheck 함수에서 모든 유효성 검사가 완료되면
-  // return true 를 하기 때문에 if() 비교하여
-  // addrCheck() 실행결과가 true 이면...
   if (scoreCheck()) {
     scoreInput();
   }
