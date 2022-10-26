@@ -1,0 +1,72 @@
+header {
+  background-color: rgb(48, 138, 212);
+  color: white;
+  text-align: center;
+  text-shadow: 1px 1px 1px black;
+  margin: 5px;
+  padding: 2em;
+}
+
+section.main {
+  flex: 1;
+}
+
+.body.addr {
+  width: 60%;
+  margin: 10px auto;
+}
+
+table.addr {
+  border-collapse: collapse;
+}
+
+table.addr td,
+table.addr th {
+  text-align: center;
+  white-space: nowrap;
+  padding: 5px 5px 10px;
+  border-bottom: 1px solid #bbb;
+  border-top: 1px solid #bbb;
+}
+
+div {
+  border: 1px solid #bbb;
+}
+
+div.addr {
+  display: flex;
+}
+
+div.addr input,
+div.addr button {
+  border-radius: 5px;
+}
+
+div.addr input {
+  flex: 1;
+  padding: 8px;
+  margin: 5px;
+}
+
+div.addr input:hover {
+  background-color: #eee;
+}
+
+div.addr input:focus {
+  background-color: #bbb;
+}
+
+div.addr button {
+  padding: 12px 16px;
+  margin: 5px;
+  border: none;
+  outline: none;
+  background-color: rgb(71, 71, 71);
+  color: white;
+  white-space: nowrap;
+}
+
+div.addr button:hover {
+  background-color: #ccc;
+  color: blue;
+}
