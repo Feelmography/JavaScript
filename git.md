@@ -81,3 +81,8 @@
   만들 수 있는 방법이 없다.
   - git bash 에서 명령으로 빈(blank) 파일을 생성해야 한다
     `touch .gitignore` : linux 명령
+
+## node project 의 .gitignore 설정 주의!!!
+
+- nodeJS 관련 프로젝트를 수행할 때는 반드시 .gitignore 파일을
+  생성하고 node_modules 폴더를 등록해 주어야 한다

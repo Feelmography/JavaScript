@@ -8,6 +8,12 @@
 - 서버 생성하기 : `const server = http.createServer(callback)`
 - 서버 시작하기 : `server.listen()`
 
+## NodeJS 프로젝트 github 와 연동할 때 주의사항
+
+- node_modules 폴더는 절대 업로드 금지
+- NodeJS 프로젝트를 github 에서 clone, pull 한 후에는 반드시
+  `npm install` 을 실행해 준다 : dependencies 다시 다운로드
+
 ### Web Application Server를 구축하기 위한 도구 설치
 
 - express 설치하기 : 프로젝트 폴더에서 `npm install -save express`  
