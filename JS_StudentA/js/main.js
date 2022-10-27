@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
   // localStorage 에 저장된 데이터를 불러와서 배열에 다시 저장하기
   const loadStudent = () => {
-    const stString = localStorage.getItem("studentInfo");
+    const stString = localStorage.getItem("StudentInfo");
     // stString 이 있으면(데이터가 저장되어 있으면)
     if (stString) {
       studentList = JSON.parse(stString);
